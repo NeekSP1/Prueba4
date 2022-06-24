@@ -1,0 +1,199 @@
+*{
+   box-sizing: border-box;   
+}
+
+/* Fondo de la pagina */
+body{
+    background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Color_icon_Cornflower_blue.svg/480px-Color_icon_Cornflower_blue.svg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'roboto' ,sans-serif;
+    margin: 0px;
+    top: 30px;
+}
+
+/* mover el texto*/
+h1{ font-size: 3.5em;}
+h1{ font-size: 2.7em;}
+h1{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none};
+li{ font-size: 1.25em;}
+
+/* Esto es para el boton*/
+button{
+    
+    font-weight: bold;
+    padding: 1px 3px;
+    border-radius: 0px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color:rgb(0, 0, 0);
+    background-color: rgb(253, 253, 253);
+}
+
+/* Color transfondo*/
+button:hover{
+    background-color: rgb(161, 161, 173);
+}
+
+
+.container{
+    max-width: 100%;
+    margin: auto;
+}
+.color-acento{ color: blueviolet; }
+
+header{
+    background-color: rgb(245, 245, 245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 300px;
+    font-weight: bold;
+    color:blueviolet;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;  
+    color:black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+/* fuente de la letra */
+h2 {
+    font-family: 'roboto' ,sans-serif;
+}
+
+
+ 
+/* color letra del footer */
+footer p {
+	color: #000000;
+	font-size: 13px;
+}
+/* Titulo del menu */
+h1{
+    color: white;
+    text-shadow: 1px 2px 2px black, 0 0 25px blueviolet;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+
+}
+
+
+
+p {
+    margin: 0px;
+    width: 100%;
+    
+}
+
+#h5{
+    color: white;
+    text-shadow: 1px 2px 2px black, 0 0 25px blueviolet;
+    text-align: center;
+}
+
+
+.box img{
+    width: 250px;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.box{
+    margin : 15px;
+}
+
+.box h5 {
+    text-align: center;
+}
+
+.Galeria{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#foto {
+    text-align: center;
+}
+
+.imgc {
+    width: 400px;
+    margin: 10px;
+}
+
+
+.container-fluid {
+    margin-top: 20px;
+}
+
+.login{
+    text-align: left;
+
+}
+.a{
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.foto {
+   
+        display: block;
+        margin: 1%;
+        max-width: 100%;
+        width: 40%;
+        
+   
+}
+
+.p img:hover{
+    transform: scale(1.15);
+}
+
+.pp {
+    max-width: 100%;
+    width:40%;
+    height: 600px;
+    Margin-left: 15px;
+    margin-top: 3%;
+    
+}
+
+#map {
+	
+height:550px;
+width:100% ;
+
+   
+   
+}
+

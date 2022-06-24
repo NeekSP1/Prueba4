@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto' , sans-serif;
+
+}
+
+html{
+    font-size: 65.5%;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+    background:cornflowerblue
+
+}
+
+h2{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+}
+
+form{
+    background-color: rgba(255,255,255,0.1);
+    width: min(60rem, 100%);
+    border-radius: 2rem;
+    box-shadow: 7px 13px 37px;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem 0 0 0;
+
+}
+
+legend{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+form fieldset{
+    border: none;
+    padding: 4rem;
+    max-width: 100%;
+    width: 400px;
+}
+
+.campo label{
+    margin-bottom: 1rem;
+}
+/* Letra label*/
+.campo label{
+    color: white;
+    font-weight: bold;
+    margin-bottom: .20rem;
+    padding-left:  2rem;
+    font-size: 18px;
+    display: block;
+
+}
+
+.campo input{
+    background-color: rgba(255,255,255,0.15);
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    height: 4rem;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+input::placeholder{
+    color: rgba(238,229,229,0.74);
+    padding-left: 2rem;
+    font-family: 'roboto' , sans-serif;
+    
+}
+/* Transfondo label*/
+input:hover{
+    background-color: rgba(0, 0, 0, 0.308) ;
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.botonprincipal{
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    width: 100%;
+    color: rgb(38, 89, 156);
+    font-size: 2rem;
+    border-radius: 2rem;
+    margin: 2rem 0 0 0;
+    height: 4rem;
+    font-weight: 800;
+    background-color: #ebebeb;
+    
+}
+
+@media(min-width:768px){
+    input::placeholder{
+        color: rgba(238,229,229,0.74);
+        padding-left: 2rem;
+
+        }
+
+        .botonprincipal{
+            width: 100%;
+            height: 4rem;
+        }
+}
+
+h3{
+    text-align: center;
+    margin: 1rem 0;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.botonprincipal:hover{
+    cursor: pointer;
+    color: #1662a0;
+    background-color: white;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #f5ad92; 
+    font-size: 2rem;
+}
+
+form::before{
+    content: '';
+    position: absolute;
+    justify-content: center;
+    height: 100%;
+    background: rgba(235,228,228,0.034);
+    width: 6%;
+    box-shadow: 0px 0px 50rem;
+    transform: skew(20deg) translate(180px);
+    animation: mover 3s linear infinite;
+}

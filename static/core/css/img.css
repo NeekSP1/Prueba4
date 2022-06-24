@@ -1,0 +1,64 @@
+/* color y posicion del titulo/
+h1{
+    color: white;
+    text-shadow: 1px 2px 2px black, 0 0 25px blueviolet;
+    text-align: center;
+}
+
+/* Posicion de la imagenes */
+div.img{
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 lightblue, 0 6px 20px 0 rgba(0,0,0,0.19);
+    float: left;
+    object-fit: cover;
+    
+}
+ /* Tamaño de la imagen*/
+div.img img{
+    width: 100%;
+    height: 350px;
+    
+    
+    
+}
+
+div.img:hover{
+    border: 1px solid lightcoral;
+    transform: rotate(-3deg);
+}
+
+/* poscion y color del texto */
+div.pie{
+    text-align: center;
+    text-shadow: 2px 2px 5px purple;
+    padding: 10px;
+}
+
+/* Faleria de foto */
+
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 90%;
+    margin: 5%;
+    grid-gap: 30px;
+    
+}
+
+.Galeria img{
+    width: 100%;
+    transition: all 300ms;
+    position: relative;
+}
+
+.Galeria img:hover{
+    transform: scale(1.15);
+}
+
+.h5 {
+    color: white;
+}
+
+
+
