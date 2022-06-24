@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/sylis.css' %}">
+    <link rel="shortcur icon" href="{% static 'core/img/logo1.png' %}" type="image/x-icon"/>
+    
+    <title>Modificar</title>
+    
+</head>
+
+<body>
+
+
+
+    <div class="contenedorS">
+        <form class="form" action="{% url 'Editar_registro' %}" id="formulario" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>COMPLETA LOS CAMPOS</legend>
+
+                <div class="contenedorDiv" >
+                    
+
+                        <div class="campo">
+                            <label for="">Nombre</label>
+                            <input type="text" name="Nombre" id="Nombre" class="Nombre" value="{{Persona.Nombre}}" placeholder="Su Nombre" title="Debe ser un nombre valido minimo de 5 caracteres" required pattern="[A-Za-z]{5,40}">
+                        </div>
+                        <div class="campo">
+                            <label for="">Rut</label>
+                            <input type="tel" name="Rut" id="Rut" placeholder="Su Rut" readonly pattern="[0-9]{8}" value="{{Persona.Rut}}" title="Debe ser una Rut valida entre 8 y 10 digitos" required/>
+                        </div>
+                        <div class="campo">
+                            <label for="">Edad</label>
+                            <input type="number" name="Edad" id="Edad" placeholder="Su Edad" min="18" max="99" value="{{Persona.Edad}}" title="Debe ser una edad valida minimo 18 y maximo 99" required/>
+                        </div>
+                        <div class="campo">
+                            <label for="">E-mail</label>
+                            <input type="email" name="Email"  id="Email"  class="Nombre" value="{{Persona.Email}}" placeholder="Su E-mail"  required>
+                        </div>
+                        <div class="campo">
+                            <label for="">Telefono</label>
+                            <input type="tel" name="Telefono" id="Telefono" class="Nombre" value="{{Persona.Telefono}}" placeholder="Su Telefono" title="Deber ser un numero valido de 9 digitos" pattern="[0-9]{9}" required>
+                        </div>
+                        <div class="campo">
+                            <label for="">Contraseña</label>
+                            <input type="password" name="Contraseña" id="Contraseña" class="Nombre" value="{{Persona.Contraseña}}" placeholder="Su Contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="La clave debe contener a lo menos 8 caracteres, una mayuscula, una minuscula y un numero">
+                        </div>
+                        
+                        
+                        <div class="boton">
+                        <button  type = "submit" class = "botonprincipal" >Modificar</button>
+                        
+                         </div>
+
+                        <h3><a href="{% url 'login' %}">¿Ya Tienes Cuenta?</a></h3>
+                    </fieldset>
+
+                </form>
+
+           
+        
+    
+    </div>
+
+
+</body>
+
+</html>

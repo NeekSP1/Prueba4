@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/sylis.css' %}">
+    <link rel="shortcur icon" href="{% static 'core/img/logo1.png' %}" type="image/x-icon"/>
+    <script src="{% static 'core/js/validacion.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    
+    <title>Registro</title>
+    
+</head>
+
+<body>
+
+    <div class="contenedorS">
+        <form class="form" action="Registrar_usuario" id="formulario" method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend>COMPLETA LOS CAMPOS</legend>
+
+                <div class="contenedorDiv" >
+                    
+
+                        <div class="campo">
+                            <label for="">Nombre</label>
+                            <input type="text" name="Nombre" id="Nombre" class="Nombre" placeholder="Su Nombre" title="Debe ser un nombre valido minimo de 5 caracteres" required pattern="[A-Za-z]{5,40}">
+                        </div>
+                        <div class="campo">
+                            <label for="">Rut</label>
+                            <input type="text" name="Rut" id="Rut" placeholder="Su Rut" required oninput="checkRut(this)" title="Debe ser una Rut valida entre 8 y 10 digitos" />
+                        </div>
+                        <div class="campo">
+                            <label for="">Edad</label>
+                            <input type="number" name="Edad" id="Edad" placeholder="Su Edad" min="18" max="99" title="Debe ser una edad valida minimo 18 y maximo 99" required/>
+                        </div>
+                        <div class="campo">
+                            <label for="">E-mail</label>
+                            <input type="email" name="Email"  id="Email"  class="Nombre" placeholder="Su E-mail"  required>
+                        </div>
+                        <div class="campo">
+                            <label for="">Telefono</label>
+                            <input type="tel" name="Telefono" id="Telefono" class="Nombre" placeholder="Su Telefono" title="Deber ser un numero valido de 9 digitos" pattern="[0-9]{9}" required>
+                        </div>
+                        <div class="campo">
+                            <label for="">Contraseña</label>
+                            <input type="password" name="Contraseña" id="Contraseña" class="Nombre" placeholder="Su Contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="La clave debe contener a lo menos 8 caracteres, una mayuscula, una minuscula y un numero">
+                        </div>
+                        
+                        
+                        <div class="boton">
+                            <input type="submit" class="botonprincipal" value="Enviar"><br>
+                            <a href="consultarre-datos" class="btn btn-success">Consultar</a>
+                </div>
+                        <h3><a href="login.html">¿Ya Tienes Cuenta?</a></h3>
+                    </fieldset>
+                    <script src="{% static 'core/js/validacion.js' %}"></script>   
+                </form>
+
+           
+        
+    
+    </div>
+
+
+</body>
+
+</html>

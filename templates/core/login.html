@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'core/css/sylis.css' %}">
+    <link rel="shortcur icon" href="{% static 'core/img/logo1.png' %}" type="image/x-icon"/>
+</head>
+<body>
+    <div class="contenedorS">
+        
+        <form class="form" action="">
+            <fieldset>
+                <legend>Iniciar sesión</legend>
+
+                <div class="contenedorDiv">
+
+                    <div class="campo">
+                        <label for="">E-mail</label>
+                        <input type="email" name="E-mail" class="correo" placeholder="Su E-mail" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/ >
+                    </div>
+                    <div class="campo">
+                        <label for="">Contraseña</label>
+                        <input type="password" name="Contraseña" class="Nombre" placeholder="Su Contraseña" required   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="La clave debe contener a lo menos 8 caracteres, una mayuscula, una minuscula y un numero"  >
+                        
+                    </div>
+                    <div class="boton">
+                        <input type="submit" class="botonprincipal" value="Iniciar Sesión">
+                    </div>
+                    <h3><a href="Registro.html">Registrarme</a></h3>
+                </fieldset>
+
+            </form>
+
+        </section>
+       <center>
+        <a href="home.html" >
+            <input type="submit" class="botonprincipal" value="Volver a la pagina principal" >
+        </center>
+</div>
+</body>
+</html>
